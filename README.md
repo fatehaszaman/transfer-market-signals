@@ -1,5 +1,7 @@
 # transfer-market-signals
 
+[Algorithm guide: pseudocode, time complexity, and memory](docs/ALGORITHM_GUIDE.md).
+
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-pytest-orange?logo=pytest)
