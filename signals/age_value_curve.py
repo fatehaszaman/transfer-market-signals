@@ -388,4 +388,5 @@ if __name__ == "__main__":
         print(f"  Phase: {result['phase']} | Peak: €{result['peak_value']}m")
         print(f"  5-yr return: {result['total_5yr_return_pct']}%")
         print(f"  Undervaluation score: €{uv}m")
-        print(f"  Trajectory: {[f\"{t['age']}:{t['value_eur_m']}\" for t in result['trajectory']]}")
+        trajectory = [f"{t['age']}:{t['value_eur_m']}" for t in result["trajectory"]]
+        print(f"  Trajectory: {trajectory}")

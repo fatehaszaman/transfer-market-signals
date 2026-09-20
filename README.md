@@ -4,7 +4,6 @@
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Tests](https://img.shields.io/badge/tests-pytest-orange?logo=pytest)
 ![Code Style](https://img.shields.io/badge/code%20style-black-black)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![NewsAPI](https://img.shields.io/badge/API-NewsAPI-red)
@@ -91,18 +90,19 @@
 ## Quickstart
 
 ```bash
-# Clone and install
-git clone https://github.com/yourorg/transfer-market-signals.git
+# Clone and create an isolated environment (macOS/Linux)
+git clone https://github.com/fatehaszaman/transfer-market-signals.git
 cd transfer-market-signals
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
 
-# Configure API keys
-cp .env.example .env
-# Edit .env with your NewsAPI and RapidAPI keys
-
-# Run the full demo
-python examples/run_transfer_analysis.py
+# Offline example: standard library only, no API keys required
+python -c "from signals.age_value_curve import AgeValueCurve; print(AgeValueCurve().expected_value_at_age(50.0, 24, 'CM'))"
 ```
+
+This runs one implemented heuristic module, not the full ranking pipeline.
+The repository does not currently ship `requirements.txt`, `.env.example`,
+or `examples/run_transfer_analysis.py`; those are not setup prerequisites.
 
 ---
 
@@ -123,7 +123,8 @@ RAPIDAPI_KEY=your_rapidapi_key_here
 
 ## Sample Output
 
-Running `python examples/run_transfer_analysis.py` with a €150m budget targeting CB and CM positions:
+Illustrative report mockup for a €150m budget targeting CB and CM positions.
+This is not output from a shipped full-pipeline runner or a current forecast:
 
 ```
 ╔══════════════════════════════════════════════════════════════════════════════════════════╗
@@ -162,16 +163,11 @@ transfer-market-signals/
 ├── valuation/
 │   └── transfer_valuator.py      # Master valuation + probability + ranking model
 ├── data/
-│   ├── api_football_client.py    # API-Football RapidAPI client
-│   ├── news_client.py            # NewsAPI client
-│   └── sample_players.json       # 25 real player records
-├── examples/
-│   └── run_transfer_analysis.py  # Full demo script
+│   ├── schemas.py               # Data models
+│   └── cache.py                 # Cache utilities
 ├── tests/
-│   └── test_age_value_curve.py   # pytest unit tests
+│   └── regression/              # Scaffolding; no executable tests yet
 ├── config.py
-├── requirements.txt
-├── .env.example
 └── README.md
 ```
 
@@ -179,11 +175,15 @@ transfer-market-signals/
 
 ## Installation
 
-```bash
-pip install -r requirements.txt
-```
+The offline age-curve example above needs only Python 3.10 or newer. Other
+modules have separate third-party dependencies; a consolidated installation
+manifest is not currently provided.
 
-**Dependencies:** numpy, pandas, requests, python-dotenv, rich, pytest
+## Testing status
+
+The test directories are scaffolding, not an executable test suite. No passing
+test status or coverage percentage is claimed. The offline example is only a
+smoke check; the heuristic projections have not been validated by this cleanup.
 
 ---
 
