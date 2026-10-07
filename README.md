@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Code Style](https://img.shields.io/badge/code%20style-black-black)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![NewsAPI](https://img.shields.io/badge/API-NewsAPI-red)
 ![API-Football](https://img.shields.io/badge/API-API--Football-blue)
 
@@ -101,8 +100,9 @@ python -c "from signals.age_value_curve import AgeValueCurve; print(AgeValueCurv
 ```
 
 This runs one implemented heuristic module, not the full ranking pipeline.
-The repository does not currently ship `requirements.txt`, `.env.example`,
-or `examples/run_transfer_analysis.py`; those are not setup prerequisites.
+Install dependencies with `pip install -r requirements.txt`. The repository
+does not ship `.env.example` or `examples/run_transfer_analysis.py`; those are
+not setup prerequisites.
 
 ---
 
@@ -124,7 +124,9 @@ RAPIDAPI_KEY=your_rapidapi_key_here
 ## Sample Output
 
 Illustrative report mockup for a €150m budget targeting CB and CM positions.
-This is not output from a shipped full-pipeline runner or a current forecast:
+This is not output from a shipped full-pipeline runner or a current forecast.
+It is dated: several listed players moved in 2024 (for example, Leny Yoro to
+Manchester United and João Neves to PSG), so treat it as a format example only:
 
 ```
 ╔══════════════════════════════════════════════════════════════════════════════════════════╗
