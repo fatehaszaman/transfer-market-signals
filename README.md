@@ -76,13 +76,13 @@
 
 ## Features
 
-- **Age-Value Curves** — Position-specific career arc modeling (GK peaks 27–31, FW peaks 24–28). Computes undervaluation scores and 5-year value projections.
-- **Performance Trajectory** — Linear regression (numpy polyfit) over 3 seasons of stats. Labels players as emerging / prime / declining / veteran.
-- **FFP Headroom Analyzer** — 2025/26 wage bill, revenue, and amortized debt data for 20 top clubs. Ranks clubs by available budget and identifies FFP-stressed sellers.
-- **Contract Signal Analysis** — 30 real players with contract expiry, release clause, and reported interest data. Urgency scoring and free-agent value uplift.
-- **News Sentiment Scoring** — Real NewsAPI integration. Keyword-based transfer sentiment (-1 to +1) with coverage volume weighting.
-- **Transfer Valuator** — Master multi-factor model combining all signals into fair value and transfer probability scores.
-- **Ranked Target Lists** — Filter by budget and position, ranked by composite opportunity score.
+- **Age-Value Curves** - Position-specific career arc modeling (GK peaks 27–31, FW peaks 24–28). Computes undervaluation scores and 5-year value projections.
+- **Performance Trajectory** - Linear regression (numpy polyfit) over 3 seasons of stats. Labels players as emerging / prime / declining / veteran.
+- **FFP Headroom Analyzer** - 2025/26 wage bill, revenue, and amortized debt data for 20 top clubs. Ranks clubs by available budget and identifies FFP-stressed sellers.
+- **Contract Signal Analysis** - 30 real players with contract expiry, release clause, and reported interest data. Urgency scoring and free-agent value uplift.
+- **News Sentiment Scoring** - Real NewsAPI integration. Keyword-based transfer sentiment (-1 to +1) with coverage volume weighting.
+- **Transfer Valuator** - Master multi-factor model combining all signals into fair value and transfer probability scores.
+- **Ranked Target Lists** - Filter by budget and position, ranked by composite opportunity score.
 
 ---
 
@@ -130,7 +130,7 @@ Manchester United and João Neves to PSG), so treat it as a format example only:
 
 ```
 ╔══════════════════════════════════════════════════════════════════════════════════════════╗
-║            TRANSFER MARKET SIGNALS — TARGET ANALYSIS REPORT                             ║
+║            TRANSFER MARKET SIGNALS - TARGET ANALYSIS REPORT                             ║
 ║            Budget: €150m  |  Positions: CB, CM  |  Window: Summer 2025                  ║
 ╠════╦═══════════════════════╦═════╦═════╦═══════════════╦════════════╦═══════╦═══════════╣
 ║ #  ║ Player                ║ Pos ║ Age ║ Fair Value    ║ Mkt Value  ║ Prob  ║ Score     ║
@@ -191,4 +191,4 @@ smoke check; the heuristic projections have not been validated by this cleanup.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) for details.
